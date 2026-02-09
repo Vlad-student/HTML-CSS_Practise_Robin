@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/*HEADER*/
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+}
+
+.header-inner {
+    width: 100%;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+}
+
+.nav-list li {
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    position: relative;
+}
+
+.nav-list li:hover {
+    color: #aaa;
+}
+
+/*INTRODUCTION SECTION*/
+.about-intro {
+    margin-top: 80px;
+}
+
+.person-about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.person-text {
+    max-width: 500px;
+}
+
+.person-title {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.desc {
+    font-size: 18px;
+    color: #aaa;
+}
+
+.person-img img {
+    width: 400px;
+    height: auto;
+}
+
+/*ABOUT SECTION*/
+
+.about {
+    margin-top: 120px;
+}
+
+.work-exp {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*FOOTER*/
+.footer {
+    margin-top: 120px;
+    padding: 40px 0;
+    border-top: 1px solid #333;
+    text-align: center;
+    color: #777;
+}
+
