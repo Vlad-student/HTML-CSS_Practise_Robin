@@ -36,21 +36,29 @@ body {
     cursor: pointer;
 }
 
-.nav-list {
-    list-style: none;
+.nav {
     display: flex;
-    gap: 32px;
+    gap: 30px;
 }
 
-.nav-list li {
-    font-size: 16px;
-    cursor: pointer;
+.nav a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav a:hover {
+    background-color: #111;
     color: #fff;
-    position: relative;
 }
 
-.nav-list li:hover {
-    color: #aaa;
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+}
+
+.nav-link:hover {
+    background-color: purple;
 }
 
 /*INTRODUCTION SECTION*/
@@ -134,13 +142,56 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    counter-reset: exp-counter;
 }
-
 
 .experience-card {
     flex: 1;
+    position: relative;
+    counter-increment: exp-counter;
+    padding-top: 100px;
+
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
+.experience-card::before {
+    content: "0" counter(exp-counter);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    font-size: 65px;
+    font-weight: 700;
+    color: #1a1a1a;
+
+    transition: color 0.3s ease;
+}
+
+.experience-card:hover::before {
+    color: #fff;
+}
+
+.experience-card:hover .card-title {
+    opacity: 0.8;
+    transition: color 0.3s ease;
+}
+
+.experience-card:hover {
+    background-color: #111;
+    border-color: #222;
+    transform: translateY(-5px);
+}
+
+.experience-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -20px;
+    width: 1px;
+    height: 100%;
+    background-color: #222;
+}
 
 .card-title {
     font-size: 24px;
@@ -159,7 +210,15 @@ body {
     color: #ccc;
 }
 
-
+.google .card-title {
+    color: #4285f4;
+}
+.facebook .card-title {
+    color: #1877f2;
+}
+.dribble .card-title {
+    color: #ea4c89;
+}
 
 /*FOOTER*/
 .footer {
